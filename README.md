@@ -1,4 +1,4 @@
-# b2b-orders-api
+# b2b-orders-api (Em construção)
 
 ## Descrição
 API para gerenciamento de usuários, clientes e autenticação com JWT usando Spring Boot.
