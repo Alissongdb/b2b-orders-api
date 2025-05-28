@@ -1,5 +1,6 @@
 package com.b2b_orders_api.security;
 
+import com.b2b_orders_api.security.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -29,9 +30,12 @@ public class SecurityConfig {
                 .sessionManagement(sm -> sm.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(HttpMethod.POST, "/api/auth/**").permitAll()
+                        .requestMatchers(HttpMethod.POST, "/api/user/**").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/api/user/**").permitAll()
+                        .requestMatchers(HttpMethod.DELETE, "/api/user/**").permitAll()
+                        .requestMatchers(HttpMethod.PUT, "/api/user/**").permitAll()
                         .anyRequest().authenticated()
-                )
-                .authenticationManager(authenticationManager(http));
+                );
 
         return http.build();
     }
