@@ -13,7 +13,6 @@ API para gerenciamento de usuários, clientes e autenticação com JWT usando Sp
 
 ## Entidades
 - User: id, email, senha, roles
-- Role: roles do sistema (ADMIN, SALES, CUSTOMER)
 - Customer: cliente básico
 
 ## Autenticação
