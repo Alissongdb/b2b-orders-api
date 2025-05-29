@@ -19,5 +19,5 @@ public class Customer {
     private Long id;
 
     @Column(nullable = false)
-    private String nomeEmpresa;
+    private String name;
 }

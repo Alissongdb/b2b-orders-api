@@ -5,7 +5,7 @@ import lombok.Builder;
 @Builder
 public record CustomerDTO(
         Long id,
-        String nomeEmpresa
+        String name
 ) {
 
 }

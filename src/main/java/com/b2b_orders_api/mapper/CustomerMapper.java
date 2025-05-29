@@ -9,14 +9,14 @@ public class CustomerMapper {
     public CustomerDTO toDTO(Customer customer) {
         return CustomerDTO.builder()
                 .id(customer.getId())
-                .nomeEmpresa(customer.getNomeEmpresa())
+                .name(customer.getName())
                 .build();
     }
 
     public Customer toEntity(CustomerDTO dto) {
         return Customer.builder()
                 .id(dto.id())
-                .nomeEmpresa(dto.nomeEmpresa())
+                .name(dto.name())
                 .build();
     }
 }
